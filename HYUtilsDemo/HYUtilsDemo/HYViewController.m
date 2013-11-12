@@ -9,6 +9,7 @@
 #import "HYViewController.h"
 
 @interface HYViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *isIOS7Label;
 
 @end
 
@@ -18,6 +19,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.isIOS7Label.text = [UIDevice isIOS7] ? @"YES" : @"NO";
 }
 
 - (void)didReceiveMemoryWarning
