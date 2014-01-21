@@ -13,5 +13,3 @@
     #import <Foundation/Foundation.h>
 #import <HYUtils.h>
 #endif
-
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;

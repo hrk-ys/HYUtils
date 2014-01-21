@@ -17,7 +17,13 @@
 {
     // Override point for customization after application launch.
     
-    [self setupLogger];
+    [HYLog setupLogger];
+#ifdef DEBUG
+    [HYLog updateLogLevel:LOG_LEVEL_VERBOSE];
+#else
+    [HYLog updateLogLevel:LOG_LEVEL_OFF];
+#endif
+    
     LOGTrace;
     return YES;
 }
@@ -49,26 +55,5 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
-- (void)setupLogger
-{
-    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-    fileLogger.rollingFrequency                       = 60 * 60 * 24;
-    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-    [fileLogger setLogFormatter:[[LogFormatter alloc] init]];
-    [DDLog addLogger:fileLogger];
-    
-    DDTTYLogger *logger = [DDTTYLogger sharedInstance];
-    [logger setLogFormatter:[[LogFormatter alloc] init]];
-    [logger setColorsEnabled:YES];
-    [logger setForegroundColor:[UIColor redColor] backgroundColor:nil forFlag:
-     LOG_FLAG_ERROR];
-    [logger setForegroundColor:[UIColor orangeColor] backgroundColor:nil forFlag:
-     LOG_FLAG_WARN];
-    [logger setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:
-     LOG_FLAG_INFO];
-    
-    [DDLog addLogger:logger];
-}
 
 @end
