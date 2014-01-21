@@ -43,7 +43,7 @@ int ddLogLevel = LOG_LEVEL_OFF;
     
     DDASLLogger* aslLogger = [[DDASLLogger alloc] init];
     [aslLogger setLogFormatter:[[LogFormatter alloc] init]];
-    [DDLog addLogger:logger];
+    [DDLog addLogger:aslLogger];
 }
 
 
