@@ -10,3 +10,4 @@
 #import "UIAlertView+Extension.h"
 #import "UIView+RectExtension.h"
 #import "UIDevice+Version.h"
+#import "NSDictionary+Extention.h"
