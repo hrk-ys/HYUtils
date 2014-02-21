@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HYUtils"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "HYUtils."
   s.license      = 'MIT'
   s.author       = "hrk-ys" 
