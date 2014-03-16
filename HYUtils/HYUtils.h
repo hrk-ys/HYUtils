@@ -3,6 +3,7 @@
 //
 
 #import "HYMacros.h"
+#import "HYBlock.h"
 #import "LogFormatter.h"
 #import "HYLog.h"
 #import "NSError+Extension.h"
