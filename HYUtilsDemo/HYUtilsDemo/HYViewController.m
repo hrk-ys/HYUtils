@@ -10,6 +10,7 @@
 
 @interface HYViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *isIOS7Label;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -21,6 +22,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.isIOS7Label.text = [UIDevice isIOS7] ? @"YES" : @"NO";
+    
+    self.imageView.image = [UIImage imageWithColor:[UIColor redColor]];
 }
 
 - (void)didReceiveMemoryWarning
