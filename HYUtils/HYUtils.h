@@ -15,4 +15,5 @@
 #import "UIImage+Extention.h"
 #import "UIView+Border.h"
 #import "HYCharacterLabel.h"
+#import "HYAlertView.h"
 
