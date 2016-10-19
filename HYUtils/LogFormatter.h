@@ -3,7 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <DDLog.h>
+#import "DDLog.h"
 
 @interface LogFormatter : NSObject <DDLogFormatter>
 {
