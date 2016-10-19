@@ -4,6 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "HYUtils."
   s.license      = 'MIT'
   s.author       = "hrk-ys"
+  s.homepage     = "https://github.com/hrk-ys/HYUtils"
   s.platform     = :ios, '5.0'
   s.requires_arc = true
   s.source       = { :git => "git@github.com:hrk-ys/HYUtils.git", :tag => "0.0.9" }
