@@ -21,7 +21,7 @@
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
 {
     NSString *logLevel;
-    switch (logMessage->logFlag)
+    switch (logMessage->_flag)
     {
         case LOG_FLAG_ERROR:
             logLevel = @"[E]";
@@ -39,15 +39,15 @@
     }
     
     NSString *dateAndTime =
-    [threadUnsafeDateFormatter stringFromDate:(logMessage->timestamp)];
+    [threadUnsafeDateFormatter stringFromDate:(logMessage->_timestamp)];
     
     return [NSString stringWithFormat:@"%@ [%d] %@ %s #%-4d %@",
             dateAndTime,
-            logMessage->machThreadID,
+            logMessage->_threadID,
             logLevel,
-            logMessage->function,
-            logMessage->lineNumber,
-            logMessage->logMsg
+            logMessage->_function,
+            logMessage->_fileName,
+            logMessage->_message
             ];
 }
 
